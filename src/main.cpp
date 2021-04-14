@@ -4,11 +4,10 @@
 
 int main(int argc, char *args[])
 {
-	// set the callback function in the Experiment01 class
 	Wav w;
 	w.setCallbackFunction(reverseSignal);
-	w.read("pathToFile");
+	w.read("/tmp/inputWavFile.wav");
 	w.process();
-	w.write("pathToResult");
+	w.write("/tmp/outputWavFile.wav");
 	return 0;
 }
